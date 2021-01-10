@@ -1,0 +1,12 @@
+import requests
+
+url = "https://api.twilio.com/2010-04-01/Accounts/ACb2e5a4bd16640284784c0b479c30d206/Messages.json"
+
+payload={}
+headers = {
+  'Authorization': 'Basic QUNiMmU1YTRiZDE2NjQwMjg0Nzg0YzBiNDc5YzMwZDIwNjpiNTYyZGMxNjAyNzY4MTM1NDA2Mzk2MzVlZTBkZjU5Zg=='
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
